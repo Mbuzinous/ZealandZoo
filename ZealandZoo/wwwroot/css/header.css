@@ -1,2 +1,27 @@
 ﻿body {
 }
+.header {
+    background-color: darkblue;
+    color: white;
+    padding: 0 25rem 0 25rem;
+    font-size: 3rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: darkblue;
+    padding: 0.2rem;
+}
+
+.grid-item {
+    background-color: darkblue;
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.zealandZooIcon {
+    width: 40rem;
+    height: 25rem;
+}

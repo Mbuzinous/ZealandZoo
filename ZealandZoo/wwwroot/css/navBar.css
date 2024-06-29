@@ -1,2 +1,39 @@
 ﻿body {
 }
+
+.navigationBar {
+
+}
+
+.navigationBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.navigationBar li {
+    float: left;
+
+}
+
+.navigationBar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1.4rem 1.6rem;
+    text-decoration: none;
+}
+
+.navigationBar li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.navigationBar active-navigationBar {
+    background-color: #04AA6D;
+}
+
+.float-right {
+    float: right;
+}
