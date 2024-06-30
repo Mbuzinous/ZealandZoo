@@ -25,3 +25,13 @@
     width: 40rem;
     height: 25rem;
 }
+
+.gridContainerTwoColumns {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    padding: ;
+    border: ;
+
+
+}
