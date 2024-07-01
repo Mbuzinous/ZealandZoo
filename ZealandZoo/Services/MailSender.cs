@@ -18,8 +18,8 @@ namespace ZealandZoo.Services
         public void SendMail(string fromEmailAddress, string subject, string body)
         {
             MimeMessage message = new MimeMessage();
-            message.From.Add(new MailboxAddress("Jakayla Lowe", "jakayla.lowe41@ethereal.email"));
-            message.To.Add(MailboxAddress.Parse("zealandzoo10@gmail.com"));
+            message.From.Add(new MailboxAddress("KONTAKT ZEALAND ZOO", "zealandzoo10@gmail.com"));
+            message.To.Add(MailboxAddress.Parse("zealandzookontakt@gmail.com"));
             message.Subject = subject;
             message.Body = new TextPart(TextFormat.Html)
             {
@@ -31,8 +31,8 @@ namespace ZealandZoo.Services
 
 
             SmtpClient client = new SmtpClient();
-            client.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls);
-            client.Authenticate("jakayla.lowe41@ethereal.email", "RYyT2y15Ygw2xb9DWV");
+            client.Connect("smtp.gmail.com", 465 , SecureSocketOptions.Auto);
+            client.Authenticate("zealandzoo10@gmail.com", "yxzwyyczopqisefo");
             client.Send(message);
 
             client.Disconnect(true);
