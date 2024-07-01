@@ -1,17 +1,18 @@
 ﻿body {
+    background-image: url("brick-wall-3364411_1920.jpg");
 }
 .header {
     background-color: darkblue;
     color: white;
-    padding: 0 25rem 0 25rem;
+    padding: 0 15rem 0 15rem;
     font-size: 3rem;
 }
 
-.grid-container {
+.gridContainerThreeColumns {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: darkblue;
-    padding: 0.2rem;
+    padding: 1rem 0.2rem 0.2rem 0.2rem;
 }
 
 .grid-item {
@@ -32,6 +33,7 @@
     background-color: white;
     padding: ;
     border: ;
-
-
+}
+.gridItemFrontPage {
+    background-color: rgba(255,255,255,0.5);
 }
