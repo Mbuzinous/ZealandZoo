@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using ZealandZoo.Services;
 using Microsoft.AspNetCore.Identity;
 using ZealandZoo.Models;
+using ZealandZoo.Interface;
 
 namespace ZealandZoo
 {
@@ -20,6 +21,8 @@ namespace ZealandZoo
                 options.UseSqlServer(connectionString);
 
             });
+
+            builder.Services.AddTransient<IMailSender, MailSender>();
 
             builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 
