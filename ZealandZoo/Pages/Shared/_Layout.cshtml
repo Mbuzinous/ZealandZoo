@@ -20,18 +20,18 @@
 <body>
     <header class="header"> 
 
-        <div class="grid-container">
+        <div class="gridContainerThreeColumns">
             <div class="grid-item"></div>
             <div class="grid-item"><a href="C:\Zealand Zoo\ZealandZoo\Pages\Index.cshtml"><img class="zealandZooIcon" src="~/277817506_657052259000962_6144921249846798986_n.jpg" /></a></div>
             <div class="grid-item"></div>
         </div>
-
         <nav class="navigationBar">
             <ul>
-            <li><a href="C:\Zealand Zoo\ZealandZoo\Pages\Index.cshtml">Forside</a></li>
-            <li><a href="">Om Foreningen</a></li>
-            <li><a href="">Kalender</a></li>
-            <li><a href="">Kontakt</a></li>
+            <li class="floatLeft"><a asp-page="/Index">Forside</a></li>
+            <li class="floatLeft"><a >Om Foreningen</a></li>
+            <li class="floatLeft"><a>Kalender</a></li>
+            <li class="floatLeft"><a asp-page="/Contact">Kontakt</a></li>
+            <li class="floatRight"><a >Login</a></li>
             </ul>
 
 
@@ -65,10 +65,14 @@
         </main>
     </div>
 
-    <footer>
-        <section>
-
+    <footer class="footer">
+        <section class="gridContainerThreeColumns">
+            <div class="grid-item"><a href="https://www.facebook.com/cafezealand/" class="iconProperties facebook" target="_blank"></a></div>
+            <div class="grid-item"><a href="#" class="iconProperties instagram" target="_blank"></a></div>
+            <div class="grid-item"><a href="https://www.zealand.dk/" target="_blank">https://www.zealand.dk/</a></div>
         </section>
+
+        <!--  zealandzoo10@gmail.com  -->
 
     </footer>
 
