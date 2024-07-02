@@ -31,8 +31,8 @@ namespace ZealandZoo.Services
 
 
             SmtpClient client = new SmtpClient();
-            client.Connect("smtp.gmail.com", 465 , SecureSocketOptions.Auto);
-            client.Authenticate("zealandzoo10@gmail.com", "yxzwyyczopqisefo");
+            client.Connect("smtp.gmail.com", 587 , SecureSocketOptions.Auto);
+            client.Authenticate("zealandzoo10@gmail.com", "mytkxvvzbqudbgvn");
             client.Send(message);
 
             client.Disconnect(true);

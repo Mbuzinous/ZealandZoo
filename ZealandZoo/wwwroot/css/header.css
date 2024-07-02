@@ -30,9 +30,10 @@
 .gridContainerTwoColumns {
     display: grid;
     grid-template-columns: auto auto;
-    background-color: white;
-    padding: ;
-    border: ;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1rem;
+    border: 0.5rem;
+    border-color: brown;
 }
 .gridItemFrontPage {
     background-color: rgba(255,255,255,0.5);
