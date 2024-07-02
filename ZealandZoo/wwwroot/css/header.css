@@ -1,14 +1,9 @@
 ﻿body {
-    background-image: url("brick-wall-3364411_1920.jpg");
+    background-image: url("../images/BrickwallBackground.jpg");
 }
 .header {
     background-color: #001d3d;
     color: white;
     padding: 0 15rem 0 15rem;
     font-size: 3rem;
-}
-
-.zealandZooIcon {
-    width: 40rem;
-    height: 25rem;
 }

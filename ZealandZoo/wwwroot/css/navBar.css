@@ -1,34 +1,32 @@
 ﻿.navigationBar {
-
 }
 
-.navigationBar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
-}
+    .navigationBar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
 
     /* .navigationBar li {
     float: left;
 }*/
 
-.navigationBar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    text-decoration: none;
-}
+    .navigationBar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        text-decoration: none;
+    }
 
-.navigationBar li a:hover:not(.active) {
-    background-color: #111;
-}
+        .navigationBar li a:hover:not(.active) {
+            background-color: #111;
+        }
 
-.navigationBar active-navigationBar {
-    background-color: #04AA6D;
-}
+    .navigationBar active-navigationBar {
+        background-color: #04AA6D;
+    }
 
 .active {
     background-color: #04AA6D;
@@ -40,4 +38,57 @@
 
 .floatRight {
     float: right;
+}
+/*START HERE*/
+.navGrandParent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.navParent {
+    font-size: 1.5rem;
+    min-width: max-content;
+    padding: 1rem;
+}
+
+    .navParent:nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+.navChild {
+    padding: 1rem;
+}
+
+.zealandZooIcon {
+    width: 10rem;
+    height: 6.5rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 8rem;
+    min-width: max-content;
+    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 0.8rem 0.8rem;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+
+.dropDown:hover .dropdown-content {
+    display: block;
+}
+
+li.dropDown {
+    display: inline-block;
 }
