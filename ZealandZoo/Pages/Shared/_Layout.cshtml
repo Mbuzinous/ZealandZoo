@@ -5,12 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ZealandZoo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/button.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/kontakt.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navBar.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ZealandZoo.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/text.css" asp-append-version="true" />
+
+
+
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <header class="header"> 
+
+        <div class="gridContainerThreeColumns">
+            <div class="grid-item"></div>
+            <div class="grid-item"><a href="C:\Zealand Zoo\ZealandZoo\Pages\Index.cshtml"><img class="zealandZooIcon" src="~/277817506_657052259000962_6144921249846798986_n.jpg" /></a></div>
+            <div class="grid-item"></div>
+        </div>
+
+        <nav class="navigationBar">
+            <ul>
+            <li class="floatLeft"><a href="C:\Zealand Zoo\ZealandZoo\Pages\Index.cshtml">Forside</a></li>
+            <li class="floatLeft"><a href="">Om Foreningen</a></li>
+            <li class="floatLeft"><a href="">Kalender</a></li>
+            <li class="floatLeft"><a href="">Kontakt</a></li>
+            <li class="floatRight"><a href="">Login</a></li>
+            </ul>
+
+
+        </nav>
+    </header>
+
+        
+       <!-- <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">ZealandZoo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -28,19 +58,34 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
+     </nav>-->
+    
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
+    <footer class="footer">
+        <section class="gridContainerThreeColumns">
+            <div class="grid-item"><a href="https://www.facebook.com/cafezealand/" class="iconProperties facebook" target="_blank"></a></div>
+            <div class="grid-item"><a href="#" class="iconProperties instagram" target="_blank"></a></div>
+            <div class="grid-item"><a href="https://www.zealand.dk/" target="_blank">https://www.zealand.dk/</a></div>
+        </section>
+
+        <!--  zealandzoo10@gmail.com  -->
+
+    </footer>
+
+    <!--
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - ZealandZoo - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
+    -->
+
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
