@@ -1,0 +1,29 @@
+﻿/*Vi vil gerne have Responsive Grid Layout*/
+
+.gridContainerThreeColumns {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 1rem 0.2rem 0.2rem 0.2rem;
+}
+
+.grid-item {
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+.gridContainerTwoColumns {
+    display: grid;
+    color: black;
+    font-family: 'Times New Roman';
+    grid-template-columns: auto auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 5rem;
+    padding: 1rem;
+
+}
+
+.gridItemFrontPage {
+    border: 0.5rem;
+    border-color: black;
+    font-size: 2rem;
+}
