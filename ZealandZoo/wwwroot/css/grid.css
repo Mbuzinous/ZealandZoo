@@ -1,11 +1,11 @@
 ﻿/*Vi vil gerne have Responsive Grid Layout*/
-
-
+/*Grid har tre følgende: Container. Item. Content. Tænk det ind hver gang.*/
 .gridContainerOneColumn {
     background-color: rgba(255, 255, 255, 0.5);
     color: black;
     display: grid;
     font-family: 'Times New Roman';
+    font-size: 1.6rem;
     grid-template-columns: 100%;
     margin: 1.5rem;
 }
@@ -26,19 +26,19 @@
     padding: 1rem;
 }
 
-.gridItemFrontPage iframe {
-
-}
-
-
 .gridContainerThreeColumns {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 1rem 0.2rem 0.2rem 0.2rem;
 }
 
 .grid-item {
     text-align: center;
+}
+
+.grid-item-sm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item-sm img {
@@ -47,12 +47,11 @@
     height: 5rem;
 }
 
-.grid-item-zealand img{
-    align-content: center;
-    width: 10rem;
-    height: 5rem;
+.grid-item-zealand img {
+    width: 12rem;
+    height: 6rem;
     background-color: orange;
     padding: 1rem;
-    margin-left: 50rem;
+    margin: 0rem 2rem 0rem 0rem;
 }
 
