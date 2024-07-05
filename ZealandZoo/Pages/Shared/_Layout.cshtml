@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="~/css/grid.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/kontakt.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/media.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/navBar.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/text.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/28f1f6dc88.js" crossorigin="anonymous"></script>
+
 
 
 
@@ -38,27 +41,10 @@
     </header>
 
 
-    <!-- <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-           <div class="container">
-               <a class="navbar-brand" asp-area="" asp-page="/Index">ZealandZoo</a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                       aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                   <ul class="navbar-nav flex-grow-1">
-                       <li class="nav-item">
-                           <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-    </nav>-->
+        
 
-    <div class="container">
+    
+    <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -66,29 +52,23 @@
 
     <footer class="footer">
         <section class="gridContainerThreeColumns">
-            <div class="grid-item"><a href="https://www.facebook.com/cafezealand/" class="iconProperties facebook" target="_blank"></a></div>
-            <div class="grid-item"><a href="#" class="iconProperties instagram" target="_blank"></a></div>
-            <div class="grid-item"><a href="https://www.zealand.dk/" target="_blank">https://www.zealand.dk/</a></div>
+            <div class="grid-item-sm">
+                <a href="https://www.facebook.com/cafezealand/" target="_blank"><img src="~/css/facebook_145802.png" alt="Facebook Icon" /></a>
+                <a href="https://www.instagram.com/cafezealandzoo?igsh=bWJrYTF6bXdoYmx5" target="_blank"><img src="~/css/instagram_174855.png" alt="Instagram Icon" /></a>
+            </div>
+            <div class="grid-item"></div>
+            <div class="grid-item-zealand">
+                <a href="https://www.zealand.dk/" target="_blank"> <img src="~/css/Zealand_logo_black_RGB_1600px_72dpi.png" alt="Zealand Logo"/> </a>
+                </div>
         </section>
+        
 
         <!--  zealandzoo10@gmail.com  -->
 
     </footer>
-
-    <!--
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - ZealandZoo - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-    -->
-
-
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
