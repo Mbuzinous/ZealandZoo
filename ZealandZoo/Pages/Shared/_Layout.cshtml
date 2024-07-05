@@ -19,25 +19,21 @@
 
 </head>
 <body>
-    <header class="header">
-        <nav class="navGrandParent-grid">
-            <div class="navParent"><a asp-page="/Index"><img class="zealandZooIcon" src="~/images/ZealandZooIcon.jpg" /></a>
-            </div>
-            <div class="navParent">
-                <div class="navChild"><a asp-page="/Index">Forside</a></div>
-                <div class="navChild">
-                    <li class="navDropDown"><a class="dropBtn">Om Foreningen</a>
-                        <div class="dropdown-content">
-                            <a asp-page="/AboutUs/BoardMembers">Bestyrelsen</a>
-                            <a asp-page="/AboutUs/BoardStatues">Vedtægter</a>
-                            <a asp-page="/AboutUs/  ">Festudvalget</a>
-                        </div>
-                    </li>
+    <header>
+        <nav class="navGridContainer">
+            <div class="navGridItem"><a asp-page="/Index"><img class="zealandZooIcon" src="~/images/ZealandZooIconIsolated.png" /></a></div>
+            <div class="navGridItem"><a asp-page="/Index">Forside</a></div>
+            <div class="navGridItem navdropdown">
+                <button class="navdropbtn">Om Foreningen</button>
+                <div class="navdropdown-content">
+                    <a asp-page="/AboutUs/BoardMembers">Bestyrelsen</a>
+                    <a asp-page="/AboutUs/ArticlesOfAssociation">Vedtægter</a>
+                    <a asp-page="/AboutUs/PartyPlanningCommittee">Festudvalget</a>
                 </div>
-                <div class="navChild"><a asp-page="/Contact">Kalender</a></div>
-                <div class="navChild"><a asp-page="/Contact">Kontakt</a></div>
             </div>
-            <div class="navParent"><a asp-page="/Index">Login</a></div>
+            <div class="navGridItem"><a asp-page="/Calendar">Kalender</a></div>
+            <div class="navGridItem"><a asp-page="/Contact">Kontakt</a></div>
+            <div class="navGridItem navdropdown"><a><partial name="_LoginPartial" /></a></div>
         </nav>
     </header>
 

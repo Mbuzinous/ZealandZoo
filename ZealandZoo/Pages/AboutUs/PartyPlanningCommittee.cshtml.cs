@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ZealandZoo.Pages.AboutUs
 {
-    public class BoardStatutesModel : PageModel
+    public class PartyPlanningCommitteeModel : PageModel
     {
         public void OnGet()
         {
