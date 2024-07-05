@@ -26,6 +26,10 @@
     padding: 1rem;
 }
 
+.gridItemFrontPage iframe {
+
+}
+
 
 .gridContainerThreeColumns {
     display: grid;
@@ -35,5 +39,20 @@
 
 .grid-item {
     text-align: center;
+}
+
+.grid-item-sm img {
+    margin: 0rem 2rem 0rem 0rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.grid-item-zealand img{
+    align-content: center;
+    width: 10rem;
+    height: 5rem;
+    background-color: orange;
+    padding: 1rem;
+    margin-left: 50rem;
 }
 
