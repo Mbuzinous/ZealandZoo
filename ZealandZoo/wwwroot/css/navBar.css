@@ -1,43 +1,76 @@
-﻿.navigationBar {
-
+﻿.zealandZooIcon {
+    width: 10rem;
+    height: 6.5rem;
 }
 
-.navigationBar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
+.navGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 12rem 12rem 12rem 12rem 1fr;
 }
 
-    /* .navigationBar li {
-    float: left;
-}*/
-
-.navigationBar li a {
-    display: block;
-    color: white;
-    text-align: center;
+.navGridItem {
+    font-size: 1.5rem;
+    min-width: max-content;
     padding: 1rem;
-    text-decoration: none;
+    place-self: center;
+}   
+
+    .navGridItem:nth-child(1) {
+        margin-left: -100%;
+    }
+
+    .navGridItem:nth-child(6) {
+        margin-left: 100%;
+    }
+
+    .navGridItem a {
+        text-decoration: none;
+        color: white;
+        padding: 1rem;
+    }
+
+
+        .navGridItem a:hover {
+            color: #9cfdfe;
+        }
+
+.navdropbtn {
+    background-color: #001d3d;
+    padding: 1.6rem;
+    border: none;
+    color: white;
+}
+    .navdropbtn:hover {
+        color: #9cfdfe;
+    }
+
+.navdropdown {
+    position: relative;
+    display: inline-block;
+
 }
 
-.navigationBar li a:hover:not(.active) {
-    background-color: #111;
+.navdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d0f1f8;
+    min-width: 13.5rem;
+    box-shadow: 0rem 0.8rem 1.6rem 0rem rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.navigationBar active-navigationBar {
-    background-color: #04AA6D;
-}
+    .navdropdown-content a {
+        color: black;
+        padding: 1.2rem 1.6rem;
+        text-decoration: none;
+        display: block;
+    }
 
-.active {
-    background-color: #04AA6D;
-}
+        .navdropdown-content a:hover {
+            background-color: #9cfdfe;
+            color: black;
+        }
 
-.floatLeft {
-    float: left;
-}
-
-.floatRight {
-    float: right;
+.navdropdown:hover .navdropdown-content {
+    display: block;
 }
