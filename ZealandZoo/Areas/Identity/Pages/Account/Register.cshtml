@@ -3,11 +3,12 @@
 @{
     ViewData["Title"] = "Register";
 }
-<div class="row">
-    <div class="col-lg-4 max-auto rounded border p-3">
+    <div class="row gridContainerOneColumn">
+    <div class="col-lg-6 max-auto rounded border p-3">
         <h2 class="text-center mb-3">Register</h2>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <div class="rpw mb-3">
                 <label class="col-sm-4 col-form-label">Email</label>
