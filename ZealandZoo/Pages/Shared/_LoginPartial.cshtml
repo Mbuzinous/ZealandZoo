@@ -6,7 +6,7 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    if (User.IsInRole("client"))
+    if (User.IsInRole("board"))
     {
         <button class="navdropbtn">Bestyrlsen</button>
         <div class="navdropdown-content">
@@ -18,8 +18,7 @@
     {
         <button class="navdropbtn">Administrationen</button>
         <div class="navdropdown-content">
-            <a asp-area="" asp-page="/Admin/CreateExhibition">Opret ny udstilling</a>
-            <a asp-area="" asp-page="/Admin/EditExhibition">Rediger/slet udstilling</a>
+            <a asp-area="Identity" asp-page="/Account/Manage/Index">Opdater profil</a>
             <a asp-area="Identity" asp-page="/Account/LogOut">Log af</a>
         </div>
     }
