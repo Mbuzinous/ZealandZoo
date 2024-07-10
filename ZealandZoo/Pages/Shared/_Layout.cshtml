@@ -22,24 +22,55 @@
 
 </head>
 <body>
-    <header>
-        <div class="main-header">        
+    <header>       
+        
+
+        <div class="main-header">
+            <nav class="navGridContainer">
+                <div class="navGridItem"><a asp-page="/Index"><img class="zealandZooIcon" src="~/images/ZealandZooIconIsolated.png" /></a></div>
+
+                <div class="navGridItem"><a asp-page="/Index">Forside</a>
+
+                    <div class="navDropDown">
+                      <button class="navDropBtn">Om Foreningen</button>
+                      <div class="navDropDown-Content">
+                        <a asp-page="/AboutUs/BoardMembers">Bestyrelsen</a>
+                        <a asp-page="/AboutUs/ArticlesOfAssociation">Vedtægter</a>
+                        <a asp-page="/AboutUs/PartyPlanningCommittee">Festudvalget</a>
+                      </div>
+                     </div>
+
+                    <a asp-page="/Calendar">Kalender</a>
+                    <a asp-page="/Contact">Kontakt</a>
+                </div>
+
+                <div class="navGridItem"><a asp-page="">Login</a></div>
+
+            </nav>
+        </div>
+
+        <!--<div class="main-header">        
            <nav class="navGridContainer">
                <div class="navGridItem"><a asp-page="/Index"><img class="zealandZooIcon" src="~/images/ZealandZooIconIsolated.png" /></a></div>
+               
                <div class="navGridItem"><a asp-page="/Index">Forside</a></div>
-               <div class="navGridItem navdropdown">
-                   <button class="navdropbtn">Om Foreningen</button>
-                   <div class="navdropdown-content">
+
+               <div class="navGridItem navDropDown">
+                   <button class="navDropBtn">Om Foreningen</button>
+                   <div class="navDropDown-Content">
                        <a asp-page="/AboutUs/BoardMembers">Bestyrelsen</a>
                        <a asp-page="/AboutUs/ArticlesOfAssociation">Vedtægter</a>
                        <a asp-page="/AboutUs/PartyPlanningCommittee">Festudvalget</a>
                    </div>
                </div>
+
                <div class="navGridItem"><a asp-page="/Calendar">Kalender</a></div>
                <div class="navGridItem"><a asp-page="/Contact">Kontakt</a></div>
                <div class="navGridItem"><a asp-page="">Login</a></div>
+
            </nav>
-        </div>
+        </div>-->
+        
     </header>
 
 

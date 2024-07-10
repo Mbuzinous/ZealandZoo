@@ -6,13 +6,9 @@
     background-size: auto;
 }
 
-header {
-
-}
 .main-header {
-    padding: 0 15rem 0 15rem;
     font-size: 5rem;
-    margin: 2rem 50rem 0rem 5rem;
+    margin: 2rem 5rem 2rem 5rem;
     color: white;
     width: 100%;
 }

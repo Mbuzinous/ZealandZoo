@@ -5,23 +5,23 @@
 
 .navGridContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: #001d3d;
+    column-gap: 25rem;
 }
 
 .navGridItem {
     font-size: 3rem;
+    margin: 1rem 0rem 1rem 0rem;
     min-width: max-content;
-    margin: 1rem;
     place-self: center;
-}   
-
+}
     .navGridItem:nth-child(1) {
-        margin-left: -100%;
+        justify-items: left;
+        
     }
 
-    .navGridItem:nth-child(6) {
-        margin-left: 100%;
+    .navGridItem:nth-child(3) {
         font-size: 4rem;
     }
 
@@ -31,27 +31,26 @@
         padding: 1rem;
     }
 
+    .navGridItem a:hover {
+        color: #9cfdfe;
+    }
 
-     .navGridItem a:hover {
-         color: #9cfdfe;
-     }
-
-.navdropbtn {
+.navDropBtn {
     padding: 1.6rem;
     border: none;
     color: white;
     background-color: #001d3d;
 }
-    .navdropbtn:hover {
+    .navDropBtn:hover {
         color: #9cfdfe;
     }
 
-.navdropdown {
+.navDropDown {
     position: relative;
     display: inline-block;
 }
 
-.navdropdown-content {
+.navDropDown-Content {
     display: none;
     position: absolute;
     background-color: #d0f1f8;
@@ -60,18 +59,18 @@
     z-index: 1;
 }
 
-    .navdropdown-content a {
+    .navDropDown-Content a {
         color: black;
         padding: 1.2rem 1.6rem;
         text-decoration: none;
         display: block;
     }
 
-        .navdropdown-content a:hover {
+        .navDropDown-Content a:hover {
             background-color: #9cfdfe;
             color: black;
         }
 
-.navdropdown:hover .navdropdown-content {
+.navDropDown:hover .navDropDown-Content {
     display: block;
 }

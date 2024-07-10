@@ -17,7 +17,7 @@
     display: grid;
     font-family: 'Times New Roman';
     grid-template-columns: 50% 50%;
-    margin: 1.5rem 5rem 1.5rem 5rem;
+    margin: 0rem 5rem 1.5rem 5rem;
 }
 
 .gridItemFrontPage {
@@ -29,6 +29,11 @@
 .gridContainerThreeColumns {
     display: grid;
     grid-template-columns: auto auto auto;
+}
+
+
+.gridContainerSixColumns {
+
 }
 
 .grid-item {

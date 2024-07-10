@@ -8,7 +8,6 @@
 @media only screen and (max-width: 600px) and (orientation: portrait) {
 
     .main-header {
-        padding: 0 0rem 0 0rem;
         width: 100%;
         background-color: blue;
     }
@@ -66,20 +65,21 @@
 
 @media (min-width: 768px) {
     .main-header {
-        width: 100%;
+        width: 94.5%;
         background-color: gold;
     }
     /*Enkelt kolonne*/
 }
 
+/*
 @media (min-width: 992px) {
     .main-header {
         width: 100%;
         background-color: purple;
     }
-}
+}*/
 
 
 
-}
+
 
