@@ -2,32 +2,40 @@
 @model ZealandZoo.Pages.ContactModel
 @{
 }
-<div class="temporary">
-<form method="post">
-    <div>
-        <div class="row mb-3">
-            <label class=" col-sm-4 col-form-label">Your Email</label>
-            <div class="col-sm-8">
-                <textarea class="form-control" asp-for="Mail.FromEmailAddress"></textarea>
-                <span asp-validation-for="Mail.FromEmailAddress" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="row mb-3">
-            <label class=" col-sm-4 col-form-label">Subject</label>
-            <div class="col-sm-8">
-                <textarea class="form-control" asp-for="Mail.Subject"></textarea>
-                <span asp-validation-for="Mail.Subject" class="text-danger"></span>
-            </div>
-        </div>
+<div class="contactFormContainer gridContainerOneColumn">
+    <h1>Kontakt os</h1>
+    <p>Har du spørgsmål eller forslag? Udfyld formlen for at komme i kontakt med os </p>
 
-        <div class="row mb-3">
-            <label class=" col-sm-4 col-form-label">Message</label>
-            <div class="col-sm-8">
-                <textarea class="form-control" asp-for="Mail.Message"></textarea>
-                <span asp-validation-for="Mail.Message" class="text-danger"></span>
-            </div>
+    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+    <form class="contactForm" method="post">
+        <div class="contactFormItem">
+            <label class="contactLabelFirstName">Fornavn</label>
+            <input class="contactInputFirstName" asp-for="Mail.FirstName" type="text" placeholder="Dit fornavn..">
+            <span asp-validation-for="Mail.FirstName" class="text-danger"></span>
         </div>
-        <button type="submit" class="btn btn-success">Send</button>
-    </div>
-</form>
+        <div class="contactFormItem">
+            <label class="contactLabelLastName">Efternavn</label>
+            <input class="contactInputLastName" asp-for="Mail.LastName" type="text" placeholder="Dit efternavn..">
+            <span asp-validation-for="Mail.LastName" class="text-danger"></span>
+        </div>
+        <div class="contactFormItem">
+            <label class="contactLabelEmail">E-mail</label>
+            <input class="contactInputEmail" asp-for="Mail.EmailAddress" type="text" placeholder="Din e-mailadresse..">
+            <span asp-validation-for="Mail.EmailAddress" class="text-danger"></span>
+        </div>
+        <div class="contactFormItem">
+            <label class="contactLabelSubject">Emne</label>
+            <input class="contactInputSubject" asp-for="Mail.Subject" type="text" placeholder="Hvad drejer det sig om?">
+            <span asp-validation-for="Mail.Subject" class="text-danger"></span>
+        </div>
+        <div class="contactFormItem">
+            <label class="contactLabelBody">Besked</label>
+            <textarea class="contactInputBody" asp-for="Mail.Body" placeholder="Skriv en besked.." style="height:200px"></textarea>
+            <span asp-validation-for="Mail.Body" class="text-danger"></span>
+        </div>
+        <div class="contactFormItem">
+            <button class="contactButtonSubmit" type="submit">Send</button>
+        </div>
+    </form>
 </div>

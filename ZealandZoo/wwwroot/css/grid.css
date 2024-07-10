@@ -8,6 +8,10 @@
     font-family: 'Times New Roman';
     grid-template-columns: 100%;
     margin: 1.5rem;
+
+    /*Kevin Srev dette*/
+    font-size: 1.6rem;
+    padding: 2rem;
 }
 
 
