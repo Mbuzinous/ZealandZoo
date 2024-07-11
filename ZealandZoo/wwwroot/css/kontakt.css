@@ -1,7 +1,7 @@
 ﻿.contactPageContainer {
     text-align: center;
     /*Unsure if with should be 55rem or cover the page*/
-    width: 55rem;
+    width: 56rem;
     /*Overriding margin values from .gridContainerOneColumn*/
     margin: 1.5rem auto;
     /*Temporary border around the container as .gridContainerOneColumn does not have*/
