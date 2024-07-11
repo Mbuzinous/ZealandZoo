@@ -1,7 +1,15 @@
 ﻿.contactPageContainer {
     text-align: center;
+    /*Unsure if with should be 55rem or cover the page*/
     width: 55rem;
+    /*Overriding margin values from .gridContainerOneColumn*/
     margin: 1.5rem auto;
+    /*Temporary border around the container as .gridContainerOneColumn does not have*/
+    /*Unsure if we should keep it*/
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: black;
+    border-radius: 0.4rem;
 }
 
 .contactForm div:nth-child(1), .contactForm div:nth-child(2) {
@@ -9,12 +17,12 @@
     width: 49%;
 }
 
-.contactForm div label {
+.contactForm label {
     display: block;
     text-align: left;
 }
 
-.contactForm div input, .contactForm div textarea, .contactForm div button {
+.contactForm input, .contactForm textarea, .contactForm button {
     width: 100%;
     height: 4rem;
     border-style: solid;
@@ -24,12 +32,12 @@
     padding: 1rem;
 }
 
-.contactForm div textarea {
+.contactForm textarea {
     height: 20rem;
     resize: none;
 }
 
-.contactForm div button {
+.contactForm button {
     background-color: #9cfdfe;
     border-style: solid;
 }
