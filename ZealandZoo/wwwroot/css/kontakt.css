@@ -2,14 +2,19 @@
     text-align: center;
     /*Unsure if with should be 55rem or cover the page*/
     width: 56rem;
-    /*Overriding margin values from .gridContainerOneColumn*/
-    margin: 1.5rem auto;
     /*Temporary border around the container as .gridContainerOneColumn does not have*/
     /*Unsure if we should keep it*/
     border-style: solid;
     border-width: 0.1rem;
     border-color: black;
     border-radius: 0.4rem;
+    /*Borrowing info from .gridContainerOneColumn*/
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    margin: 1.5rem auto;
+    font-size: 1.4rem;
+    padding: 2rem;
+    font-family: 'Times New Roman';
 }
 
 .contactForm div:nth-child(1), .contactForm div:nth-child(2) {
@@ -17,9 +22,13 @@
     width: 49%;
 }
 
-.contactForm label {
-    display: block;
-    text-align: left;
+.contactForm label, .contactForm span {
+    display: inline-block;
+    float: left;
+}
+
+.contactForm span {
+    color: red;
 }
 
 .contactForm input, .contactForm textarea, .contactForm button {
