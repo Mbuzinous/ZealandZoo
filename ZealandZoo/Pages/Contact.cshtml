@@ -2,7 +2,7 @@
 @model ZealandZoo.Pages.ContactModel
 @{
 }
-<div class="contactFormContainer gridContainerOneColumn">
+<div class="contactPageContainer gridContainerOneColumn">
     <h1>Kontakt os</h1>
     <p>Har du spørgsmål eller forslag? Udfyld formlen for at komme i kontakt med os </p>
 
@@ -10,27 +10,27 @@
 
     <form class="contactForm" method="post">
         <div class="contactFormItem">
-            <label class="contactLabelFirstName">Fornavn<span asp-validation-for="Mail.FirstName" class="text-danger contactValidation"></span></label>
-            <input class="contactInputFirstName" asp-for="Mail.FirstName" type="text">
+            <label>Fornavn*<span asp-validation-for="Mail.FirstName" class="text-danger contactValidation"></span></label>
+            <input asp-for="Mail.FirstName" type="text">
         </div>
         <div class="contactFormItem">
-            <label class="contactLabelLastName">Efternavn<span asp-validation-for="Mail.LastName" class="text-danger contactValidation"></span></label>
-            <input class="contactInputLastName" asp-for="Mail.LastName" type="text">
+            <label>Efternavn</label>
+            <input asp-for="Mail.LastName" type="text">
         </div>
         <div class="contactFormItem">
-            <label class="contactLabelEmail">E-mail<span asp-validation-for="Mail.EmailAddress" class="text-danger contactValidation"></span></label>
-            <input class="contactInputEmail" asp-for="Mail.EmailAddress" type="text">
+            <label>E-mail*<span asp-validation-for="Mail.EmailAddress" class="text-danger contactValidation"></span></label>
+            <input asp-for="Mail.EmailAddress" type="text">
         </div>
         <div class="contactFormItem">
-            <label class="contactLabelSubject">Emne<span asp-validation-for="Mail.Subject" class="text-danger contactValidation"></span></label>
-            <input class="contactInputSubject" asp-for="Mail.Subject" type="text">
+            <label>Emne*<span asp-validation-for="Mail.Subject" class="text-danger contactValidation"></span></label>
+            <input asp-for="Mail.Subject" type="text">
         </div>
         <div class="contactFormItem">
-            <label class="contactLabelBody">Besked<span asp-validation-for="Mail.Body" class="text-danger contactValidation"></span></label>
-            <textarea class="contactInputBody" asp-for="Mail.Body"></textarea>
+            <label>Besked*<span asp-validation-for="Mail.Body" class="text-danger contactValidation"></span></label>
+            <textarea asp-for="Mail.Body"></textarea>
         </div>
         <div class="contactFormItem">
-            <button class="contactButtonSubmit" type="submit">Send</button>
+            <button type="submit">Send</button>
         </div>
     </form>
 

@@ -7,7 +7,6 @@ namespace ZealandZoo.Models
         [Required(ErrorMessage = " - Skriv venligst dit fornavn.")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = " - Skriv venligst dit efternavn.")]
         public string LastName { get; set; }
 
         [Required(ErrorMessage = " - E-mailadresse er påkrævet.")]
