@@ -4,32 +4,33 @@
 }
 <div class="contactPageContainer gridContainerOneColumn">
     <h1>Kontakt os</h1>
-    <p>Har du spørgsmål eller forslag? Udfyld formlen for at komme i kontakt med os </p>
+    <hr />
+    <p>Har du spørgsmål eller forslag? Udfyld formlen for at komme i kontakt med os.</p>
 
     <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 
     <form class="contactForm" method="post">
-        <div class="contactFormItem">
+        <div>
             <label>Fornavn*<span asp-validation-for="Mail.FirstName" class="text-danger contactValidation"></span></label>
             <input asp-for="Mail.FirstName" type="text">
         </div>
-        <div class="contactFormItem">
+        <div>
             <label>Efternavn</label>
             <input asp-for="Mail.LastName" type="text">
         </div>
-        <div class="contactFormItem">
+        <div>
             <label>E-mail*<span asp-validation-for="Mail.EmailAddress" class="text-danger contactValidation"></span></label>
             <input asp-for="Mail.EmailAddress" type="text">
         </div>
-        <div class="contactFormItem">
+        <div>
             <label>Emne*<span asp-validation-for="Mail.Subject" class="text-danger contactValidation"></span></label>
             <input asp-for="Mail.Subject" type="text">
         </div>
-        <div class="contactFormItem">
+        <div>
             <label>Besked*<span asp-validation-for="Mail.Body" class="text-danger contactValidation"></span></label>
             <textarea asp-for="Mail.Body"></textarea>
         </div>
-        <div class="contactFormItem">
+        <div>
             <button type="submit">Send</button>
         </div>
     </form>
