@@ -1,1 +1,34 @@
-﻿
+﻿.contactFormContainer {
+    text-align: center;
+}
+
+.contactForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contactFormItem {
+    padding: 1rem;
+}
+
+    .contactFormItem:nth-child(n+3) {
+        grid-column: span 2;
+    }
+
+    .contactFormItem:nth-child(1) input {
+        margin-right: -44rem;
+        display: block;
+    }
+
+    .contactFormItem:nth-child(2) input {
+        margin-right: 44rem;
+        display: block;
+    }
+
+    .contactFormItem:nth-child(n-2) input {
+        width: 25rem;
+    }
+
+    .contactFormItem:nth-child(n+3) input, .contactFormItem:nth-child(n+3) textarea {
+        width: 50rem;
+    }
