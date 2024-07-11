@@ -10,32 +10,28 @@
 
     <form class="contactForm" method="post">
         <div class="contactFormItem">
-            <label class="contactLabelFirstName">Fornavn</label>
-            <input class="contactInputFirstName" asp-for="Mail.FirstName" type="text" placeholder="Dit fornavn..">
-            <span asp-validation-for="Mail.FirstName" class="text-danger"></span>
+            <label class="contactLabelFirstName">Fornavn<span asp-validation-for="Mail.FirstName" class="text-danger contactValidation"></span></label>
+            <input class="contactInputFirstName" asp-for="Mail.FirstName" type="text">
         </div>
         <div class="contactFormItem">
-            <label class="contactLabelLastName">Efternavn</label>
-            <input class="contactInputLastName" asp-for="Mail.LastName" type="text" placeholder="Dit efternavn..">
-            <span asp-validation-for="Mail.LastName" class="text-danger"></span>
+            <label class="contactLabelLastName">Efternavn<span asp-validation-for="Mail.LastName" class="text-danger contactValidation"></span></label>
+            <input class="contactInputLastName" asp-for="Mail.LastName" type="text">
         </div>
         <div class="contactFormItem">
-            <label class="contactLabelEmail">E-mail</label>
-            <input class="contactInputEmail" asp-for="Mail.EmailAddress" type="text" placeholder="Din e-mailadresse..">
-            <span asp-validation-for="Mail.EmailAddress" class="text-danger"></span>
+            <label class="contactLabelEmail">E-mail<span asp-validation-for="Mail.EmailAddress" class="text-danger contactValidation"></span></label>
+            <input class="contactInputEmail" asp-for="Mail.EmailAddress" type="text">
         </div>
         <div class="contactFormItem">
-            <label class="contactLabelSubject">Emne</label>
-            <input class="contactInputSubject" asp-for="Mail.Subject" type="text" placeholder="Hvad drejer det sig om?">
-            <span asp-validation-for="Mail.Subject" class="text-danger"></span>
+            <label class="contactLabelSubject">Emne<span asp-validation-for="Mail.Subject" class="text-danger contactValidation"></span></label>
+            <input class="contactInputSubject" asp-for="Mail.Subject" type="text">
         </div>
         <div class="contactFormItem">
-            <label class="contactLabelBody">Besked</label>
-            <textarea class="contactInputBody" asp-for="Mail.Body" placeholder="Skriv en besked.." style="height:200px"></textarea>
-            <span asp-validation-for="Mail.Body" class="text-danger"></span>
+            <label class="contactLabelBody">Besked<span asp-validation-for="Mail.Body" class="text-danger contactValidation"></span></label>
+            <textarea class="contactInputBody" asp-for="Mail.Body"></textarea>
         </div>
         <div class="contactFormItem">
             <button class="contactButtonSubmit" type="submit">Send</button>
         </div>
     </form>
+
 </div>

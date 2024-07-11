@@ -22,20 +22,20 @@ namespace ZealandZoo.Pages
         public void OnGet()
         {
         }
-        public void OnPost()
+        public IActionResult OnPost()
         {
             if (!_mailSender.ValidateEmailFormat(Mail.EmailAddress))
             {
                 ModelState.AddModelError("Mail.FromEmailAddress", "Invalid email address");
-                return;
+                return Page();
             }
             if (!ModelState.IsValid)
             {
-                return;
+                return Page();
 
             }
             _mailSender.SendMail(Mail.FirstName, Mail.LastName, Mail.EmailAddress, Mail.Subject, Mail.Body);
-            return;
+            return Redirect("/");
         }
     }
 }
