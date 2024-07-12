@@ -6,5 +6,30 @@
     margin: 2rem 5rem 0rem 5rem;
 }
 
+.gridContainerFooterThreeColumns {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item-sm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item-sm img {
+    margin: 0rem 2rem 0rem 0rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.grid-item-zealand img {
+    width: 12rem;
+    height: 6rem;
+    background-color: orange;
+    padding: 1rem;
+    margin: 0rem 2rem 0rem 0rem;
+}
+
 
 
