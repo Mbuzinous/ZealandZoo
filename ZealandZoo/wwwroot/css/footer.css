@@ -1,37 +1,10 @@
-﻿
-
-.footer {
+﻿.footer {
     background-color: #001d3d;
     color: white;
     padding: 5rem 5rem 5rem 5rem;
     font-size: 1.5rem;
-    margin: 2rem 5rem -10rem 5rem;
+    margin: 2rem 5rem 0rem 5rem;
 }
 
-
-.iconProperties {
-    padding: 2.2rem;
-    font-size: 3.3rem;
-    width: 3.3rem;
-    text-align: center;
-    text-decoration: none;
-    margin: 0.55rem 0.22rem;
-    border-radius: 50%;
-}
-
-.iconProperties:hover {
-    opacity: 0.7;
-}
-
-/*
-.facebook {
-    background: #3B5998;
-    color: white;
-}
-
-.instagram {
-    background: #125688;
-    color: white;
-}*/
 
 

@@ -22,22 +22,55 @@
 
 </head>
 <body>
-    <header>
-        <nav class="navGridContainer">
-            <div class="navGridItem"><a asp-page="/Index"><img class="zealandZooIcon" src="~/images/ZealandZooIconIsolated.png" /></a></div>
-            <div class="navGridItem"><a asp-page="/Index">Forside</a></div>
-            <div class="navGridItem navdropdown">
-                <button class="navdropbtn">Om Foreningen</button>
-                <div class="navdropdown-content">
-                    <a asp-page="/AboutUs/BoardMembers">Bestyrelsen</a>
-                    <a asp-page="/AboutUs/ArticlesOfAssociation">Vedtægter</a>
-                    <a asp-page="/AboutUs/PartyPlanningCommittee">Festudvalget</a>
+    <header>       
+        
+
+        <div class="main-header">
+            <nav class="navGridContainer">
+                <div class="navGridItem"><a asp-page="/Index"><img class="zealandZooIcon" src="~/images/ZealandZooIconIsolated.png" /></a></div>
+
+                <div class="navGridItem"><a asp-page="/Index">Forside</a>
+
+                    <div class="navDropDown">
+                      <button class="navDropBtn">Om Foreningen</button>
+                      <div class="navDropDown-Content">
+                        <a asp-page="/AboutUs/BoardMembers">Bestyrelsen</a>
+                        <a asp-page="/AboutUs/ArticlesOfAssociation">Vedtægter</a>
+                        <a asp-page="/AboutUs/PartyPlanningCommittee">Festudvalget</a>
+                      </div>
+                     </div>
+
+                    <a asp-page="/Calendar">Kalender</a>
+                    <a asp-page="/Contact">Kontakt</a>
                 </div>
-            </div>
-            <div class="navGridItem"><a asp-page="/Calendar">Kalender</a></div>
-            <div class="navGridItem"><a asp-page="/Contact">Kontakt</a></div>
-            <div class="navGridItem navdropdown"><partial name="_LoginPartial" /></div>
-        </nav>
+
+                <div class="navGridItem"><a asp-page="">Login</a></div>
+
+            </nav>
+        </div>
+
+        <!--<div class="main-header">        
+           <nav class="navGridContainer">
+               <div class="navGridItem"><a asp-page="/Index"><img class="zealandZooIcon" src="~/images/ZealandZooIconIsolated.png" /></a></div>
+               
+               <div class="navGridItem"><a asp-page="/Index">Forside</a></div>
+
+               <div class="navGridItem navDropDown">
+                   <button class="navDropBtn">Om Foreningen</button>
+                   <div class="navDropDown-Content">
+                       <a asp-page="/AboutUs/BoardMembers">Bestyrelsen</a>
+                       <a asp-page="/AboutUs/ArticlesOfAssociation">Vedtægter</a>
+                       <a asp-page="/AboutUs/PartyPlanningCommittee">Festudvalget</a>
+                   </div>
+               </div>
+
+               <div class="navGridItem"><a asp-page="/Calendar">Kalender</a></div>
+               <div class="navGridItem"><a asp-page="/Contact">Kontakt</a></div>
+               <div class="navGridItem"><a asp-page="">Login</a></div>
+
+           </nav>
+        </div>-->
+        
     </header>
 
 
@@ -52,14 +85,13 @@
 
     <footer class="footer">
         <section class="gridContainerThreeColumns">
+            <div class="grid-item-sm"></div>
             <div class="grid-item-sm">
                 <a href="https://www.facebook.com/cafezealand/" target="_blank"><img src="~/css/facebook_145802.png" alt="Facebook Icon" /></a>
+                <a class="grid-item-zealand" href="https://www.zealand.dk/" target="_blank"> <img src="~/css/Zealand_logo_black_RGB_1600px_72dpi.png" alt="Zealand Logo" /> </a>
                 <a href="https://www.instagram.com/cafezealandzoo?igsh=bWJrYTF6bXdoYmx5" target="_blank"><img src="~/css/instagram_174855.png" alt="Instagram Icon" /></a>
             </div>
-            <div class="grid-item"></div>
-            <div class="grid-item-zealand">
-                <a href="https://www.zealand.dk/" target="_blank"> <img src="~/css/Zealand_logo_black_RGB_1600px_72dpi.png" alt="Zealand Logo"/> </a>
-                </div>
+            <div class="grid-item-sm"></div>
         </section>
         
 

@@ -1,9 +1,14 @@
 ﻿body {
     background-image: url("../images/BrickwallBackground.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
-header {
-    background-color: #001d3d;
+
+.main-header {
+    font-size: 5rem;
+    margin: 2rem 5rem 2rem 5rem;
     color: white;
-    padding: 0 15rem 0 15rem;
-    font-size: 3rem;
+    width: 100%;
 }
