@@ -2,31 +2,40 @@
 @model ZealandZoo.Pages.ContactModel
 @{
 }
+<div class="contactPageContainer">
 
-<form method="post">
-    <div>
-        <div class="row mb-3">
-            <label class=" col-sm-4 col-form-label">Your Email</label>
-            <div class="col-sm-8">
-                <textarea class="form-control" asp-for="Mail.FromEmailAddress"></textarea>
-                <span asp-validation-for="Mail.FromEmailAddress" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="row mb-3">
-            <label class=" col-sm-4 col-form-label">Subject</label>
-            <div class="col-sm-8">
-                <textarea class="form-control" asp-for="Mail.Subject"></textarea>
-                <span asp-validation-for="Mail.Subject" class="text-danger"></span>
-            </div>
-        </div>
+    <h1>Kontakt os</h1>
+    <hr />
+    <p>Har du spørgsmål eller forslag? Udfyld formlen for at komme i kontakt med os.</p>
 
-        <div class="row mb-3">
-            <label class=" col-sm-4 col-form-label">Message</label>
-            <div class="col-sm-8">
-                <textarea class="form-control" asp-for="Mail.Message"></textarea>
-                <span asp-validation-for="Mail.Message" class="text-danger"></span>
-            </div>
+    <form class="contactForm" method="post">
+        <div>
+            <label>Fornavn*</label>
+            <span asp-validation-for="Mail.FirstName"></span>
+            <input asp-for="Mail.FirstName" type="text">
         </div>
-        <button type="submit" class="btn btn-success">Send</button>
-    </div>
-</form>
+        <div>
+            <label>Efternavn</label>
+            <input asp-for="Mail.LastName" type="text">
+        </div>
+        <div>
+            <label>E-mail*</label>
+            <span asp-validation-for="Mail.EmailAddress"></span>
+            <input asp-for="Mail.EmailAddress" type="text">
+        </div>
+        <div>
+            <label>Emne*</label>
+            <span asp-validation-for="Mail.Subject"></span>
+            <input asp-for="Mail.Subject" type="text">
+        </div>
+        <div>
+            <label>Besked*</label>
+            <span asp-validation-for="Mail.Body"></span>
+            <textarea asp-for="Mail.Body"></textarea>
+        </div>
+        <div>
+            <button type="submit">Send</button>
+        </div>
+    </form>
+
+</div>

@@ -1,46 +1,76 @@
-﻿body {
+﻿.zealandZooIcon {
+    width: 10rem;
+    height: 6.5rem;
 }
 
-.navigationBar {
-
+.navGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #001d3d;
+    column-gap: 25rem;
 }
 
-.navigationBar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
+.navGridItem {
+    font-size: 3rem;
+    margin: 1rem 0rem 1rem 0rem;
+    min-width: max-content;
+    place-self: center;
 }
+    .navGridItem:nth-child(1) {
+        justify-items: left;
+        
+    }
 
-    /* .navigationBar li {
-    float: left;
-}*/
+    .navGridItem:nth-child(3) {
+        font-size: 4rem;
+    }
 
-.navigationBar li a {
-    display: block;
+    .navGridItem a {
+        text-decoration: none;
+        color: white;
+        padding: 1rem;
+    }
+
+    .navGridItem a:hover {
+        color: #9cfdfe;
+    }
+
+.navDropBtn {
+    padding: 1.6rem;
+    border: none;
     color: white;
-    text-align: center;
-    padding: 1rem;
-    text-decoration: none;
+    background-color: #001d3d;
+}
+    .navDropBtn:hover {
+        color: #9cfdfe;
+    }
+
+.navDropDown {
+    position: relative;
+    display: inline-block;
 }
 
-.navigationBar li a:hover:not(.active) {
-    background-color: #111;
+.navDropDown-Content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 13.5rem;
+    box-shadow: 0rem 0.8rem 1.6rem 0rem rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.navigationBar active-navigationBar {
-    background-color: #04AA6D;
-}
+    .navDropDown-Content a {
+        color: black;
+        padding: 1.2rem 1.6rem;
+        text-decoration: none;
+        display: block;
+    }
 
-.active {
-    background-color: #04AA6D;
-}
+        .navDropDown-Content a:hover {
+            background-color: #9cfdfe;
+            color: black;
+        }
 
-.floatLeft {
-    float: left;
-}
-
-.floatRight {
-    float: right;
+.navDropDown:hover .navDropDown-Content {
+    display: block;
 }

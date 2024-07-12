@@ -24,15 +24,18 @@ namespace ZealandZoo.Pages
         }
         public IActionResult OnPost()
         {
+            if (!_mailSender.ValidateEmailFormat(Mail.EmailAddress))
+            {
+                ModelState.AddModelError("Mail.FromEmailAddress", "Invalid email address");
+                return Page();
+            }
             if (!ModelState.IsValid)
             {
                 return Page();
-                Console.WriteLine("Messege did not send");
 
             }
-            _mailSender.SendMail(Mail.FromEmailAddress, Mail.Subject, Mail.Message);
-            return RedirectToPage("Index");
-            Console.WriteLine("Messege sent");
+            _mailSender.SendMail(Mail.FirstName, Mail.LastName, Mail.EmailAddress, Mail.Subject, Mail.Body);
+            return Redirect("/");
         }
     }
 }

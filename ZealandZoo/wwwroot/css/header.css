@@ -1,40 +1,14 @@
 ﻿body {
-    background-image: url("brick-wall-3364411_1920.jpg");
+    background-image: url("../images/BrickwallBackground.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
-.header {
-    background-color: darkblue;
+
+.main-header {
+    font-size: 5rem;
+    margin: 2rem 5rem 2rem 5rem;
     color: white;
-    padding: 0 15rem 0 15rem;
-    font-size: 3rem;
-}
-
-.gridContainerThreeColumns {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: darkblue;
-    padding: 1rem 0.2rem 0.2rem 0.2rem;
-}
-
-.grid-item {
-    background-color: darkblue;
-    border: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.zealandZooIcon {
-    width: 40rem;
-    height: 25rem;
-}
-
-.gridContainerTwoColumns {
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 1rem;
-    border: 0.5rem;
-    border-color: brown;
-}
-.gridItemFrontPage {
-    background-color: rgba(255,255,255,0.5);
+    width: 100%;
 }

@@ -1,0 +1,12 @@
+﻿@page
+@model ZealandZoo.Pages.LoginStuffTesting.UserPageModel
+@{
+}
+<h2 class="text-center">Welcome to your  account</h2>
+
+<div>
+    Email: @Model.appUser?.Email
+</div>
+<div>
+    Created At: @Model.appUser?.CreatedAt.ToString("MM/dd/yyyy")
+</div>
