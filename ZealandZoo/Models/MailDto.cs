@@ -9,7 +9,8 @@ namespace ZealandZoo.Models
 
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = " - E-mailadresse er påkrævet.")]
+        [Required(ErrorMessage = " - Email adresse er påkrævet.")]
+        [EmailAddress(ErrorMessage = " - Email adressen er ikke en gyldig email adresse")]
         public string EmailAddress { get; set; }
 
         [Required(ErrorMessage = " - Skriv venligst hvad det drejer sig om."), MaxLength(30)]

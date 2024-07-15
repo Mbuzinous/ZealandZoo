@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ZealandZoo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/accounts.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/button.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/calendarAndBoard.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
@@ -21,37 +22,37 @@
 
 </head>
 <body>
-    <header>       
-        
+    <header>
+
 
         <div class="main-header">
             <nav class="navGridContainer">
                 <div class="navGridItem"><a asp-page="/Index"><img class="zealandZooIcon" src="~/images/ZealandZooIconIsolated.png" /></a></div>
 
-                <div class="navGridItem"><a asp-page="/Index">Forside</a>
+                <div class="navGridItem">
+                    <a asp-page="/Index">Forside</a>
 
                     <div class="navDropDown">
-                      <button class="navDropBtn">Om Foreningen</button>
-                      <div class="navDropDown-Content">
-                        <a asp-page="/AboutUs/BoardMembers">Bestyrelsen</a>
-                        <a asp-page="/AboutUs/ArticlesOfAssociation">Vedtægter</a>
-                        <a asp-page="/AboutUs/PartyPlanningCommittee">Festudvalget</a>
-                      </div>
-                     </div>
+                        <button class="navDropBtn">Om Foreningen</button>
+                        <div class="navDropDown-Content">
+                            <a asp-page="/AboutUs/BoardMembers">Bestyrelsen</a>
+                            <a asp-page="/AboutUs/ArticlesOfAssociation">Vedtægter</a>
+                            <a asp-page="/AboutUs/PartyPlanningCommittee">Festudvalget</a>
+                        </div>
+                    </div>
 
                     <a asp-page="/Calendar">Kalender</a>
                     <a asp-page="/Contact">Kontakt</a>
                 </div>
 
-                <div class="navGridItem"><a asp-page="">Login</a></div>
-
+                <div class="navGridItem navdropdown"><partial name="_LoginPartial" /></div>
             </nav>
         </div>
 
-        <!--<div class="main-header">        
+        <!--<div class="main-header">
            <nav class="navGridContainer">
                <div class="navGridItem"><a asp-page="/Index"><img class="zealandZooIcon" src="~/images/ZealandZooIconIsolated.png" /></a></div>
-               
+
                <div class="navGridItem"><a asp-page="/Index">Forside</a></div>
 
                <div class="navGridItem navDropDown">
@@ -69,13 +70,13 @@
 
            </nav>
         </div>-->
-        
+
     </header>
 
 
-        
 
-    
+
+
     <div>
         <main role="main" class="pb-3">
             @RenderBody()
@@ -92,7 +93,7 @@
             </div>
             <div class="grid-item-sm" href="https://trello.com/b/js6u4iF5" target="_blank">https://trello.com/b/js6u4iF5</div>
         </section>
-        
+
 
         <!--  zealandzoo10@gmail.com  -->
 

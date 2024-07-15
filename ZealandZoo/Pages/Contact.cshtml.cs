@@ -24,11 +24,6 @@ namespace ZealandZoo.Pages
         }
         public IActionResult OnPost()
         {
-            if (!_mailSender.ValidateEmailFormat(Mail.EmailAddress))
-            {
-                ModelState.AddModelError("Mail.FromEmailAddress", "Invalid email address");
-                return Page();
-            }
             if (!ModelState.IsValid)
             {
                 return Page();
