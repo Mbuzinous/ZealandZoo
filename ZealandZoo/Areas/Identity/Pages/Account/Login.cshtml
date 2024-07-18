@@ -4,27 +4,28 @@
 @{
     ViewData["Title"] = "Login";
 }
-
-<div class="accountPageContainer">
-    <div>
-        <h2>Please Login</h2>
+    <div class="accountPageContainer">
+        <div>
+            <h2>Please Login</h2>
+        </div>
+        <form class="accountForm" method="post">
+            <div>
+                <label>Email</label>
+                <span asp-validation-for="Input.Email"></span>
+                <input asp-for="Input.Email" />
+            </div>
+            <div>
+                <label>Adgangskode</label>
+                <span asp-validation-for="Input.Password"></span>
+                <input asp-for="Input.Password" />
+            </div>
+            <div>
+                <button class="accountButtonLoginRegister" type="submit">Login</button>
+            </div>
+            <div>
+                <button class="accountButtonCancel" type="button" asp-page="/Index">Cancel</button>
+            </div>
+        </form>
     </div>
-    <form class="accountForm" method="post">
-        <div>
-            <label>Email</label>
-            <span asp-validation-for="Input.Email"></span>
-            <input asp-for="Input.Email" />
-        </div>
-        <div>
-            <label>Adgangskode</label>
-            <span asp-validation-for="Input.Password"></span>
-            <input asp-for="Input.Password"/>
-        </div>
-        <div>
-            <button class="accountButtonLoginRegister" type="submit">Login</button>
-        </div>
-        <div>
-            <button class="accountButtonCancel" type="button" asp-page="/Index">Cancel</button>
-        </div>
-    </form>
-</div>
+
+

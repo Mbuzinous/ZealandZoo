@@ -8,16 +8,16 @@
 {
     if (User.IsInRole("board"))
     {
-        <button class="navdropbtn">Bestyrer</button>
-        <div class="navdropdown-content">
+        <button class="navDropBtn">Bestyrer</button>
+        <div class="navDropDown-Content">
             <a asp-area="Identity" asp-page="/Account/Manage/Index">Opdater profil</a>
             <a asp-area="Identity" asp-page="/Account/LogOut">Log af</a>
         </div>
     }
     else if (User.IsInRole("admin"))
     {
-        <button class="navdropbtn">Administrationen</button>
-        <div class="navdropdown-content">
+        <button class="navDropBtn">Administrationen</button>
+        <div class="navDropDown-Content">
             <a asp-area="Identity" asp-page="/Account/Manage/Index">Opdater profil</a>
             <a asp-area="Identity" asp-page="/Account/LogOut">Log af</a>
         </div>

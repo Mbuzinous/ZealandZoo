@@ -22,6 +22,7 @@ using ZealandZoo.Models;
 
 namespace ZealandZoo.Areas.Identity.Pages.Account
 {
+    [Authorize(Roles = "none")]
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;

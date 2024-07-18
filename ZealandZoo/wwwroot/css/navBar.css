@@ -28,7 +28,7 @@ body {
 }
 
 .navGridItem {
-    font-size: 3rem;
+    font-size: 1.6rem;
     margin: 1rem 0rem 1rem 0rem;
     min-width: max-content;
     place-self: center;
@@ -36,10 +36,6 @@ body {
     .navGridItem:nth-child(1) {
         justify-items: left;
         
-    }
-
-    .navGridItem:nth-child(3) {
-        font-size: 4rem;
     }
 
     .navGridItem a {
