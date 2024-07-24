@@ -9,3 +9,28 @@ html {
     font-size: 20px;
   }
 }*/
+
+.gridCalendarContainer {
+    place-self:center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);}
+
+.gridCalendar {
+    padding: 0.1rem;
+    place-self: center;
+}
+
+.gridButton {
+    width: 15rem;
+    height: 10rem;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: black;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    background-color: #9cfdfe;
+}   
+
+    .gridButton:hover {
+        background-color: #65dbdd;
+    }
