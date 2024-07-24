@@ -23,6 +23,7 @@ namespace ZealandZoo
             });
 
             builder.Services.AddTransient<IMailSender, MailSender>();
+            builder.Services.AddTransient<IBoardMemberRepository, BoardMemberRepository>();
 
             builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()

@@ -27,20 +27,5 @@
     .boardMembersitem img {
         width: 55rem;
         height: 49rem;
+        box-shadow: 5px 10px 12px #ec00ff;
     }
-
-.weslynImg {
-    box-shadow: 5px 10px 12px #ec00ff;
-}
-
-.gormImg {
-    box-shadow: 5px 10px 12px #fa110a;
-}
-
-.kevinImg {
-    box-shadow: 5px 10px 12px #cfff00;
-}
-
-.danielImg {
-    box-shadow: 5px 10px 12px #38b6ff;
-}

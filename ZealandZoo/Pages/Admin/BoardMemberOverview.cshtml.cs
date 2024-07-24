@@ -1,11 +1,15 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using NuGet.Protocol.Core.Types;
 using ZealandZoo.Interface;
 using ZealandZoo.Models;
+using ZealandZoo.Pages.AboutUs;
 
-namespace ZealandZoo.Pages.AboutUs
+namespace ZealandZoo.Pages.Administration
 {
-    public class BoardMembersModel : PageModel
+    [Authorize(Roles = "admin")]
+    public class BoardMemberOverviewModel : PageModel
     {
         private IBoardMemberRepository Repo { get; set; }
 
@@ -14,7 +18,7 @@ namespace ZealandZoo.Pages.AboutUs
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
 
-        public BoardMembersModel(IBoardMemberRepository repository)
+        public BoardMemberOverviewModel(IBoardMemberRepository repository) 
         {
             Repo = repository;
         }

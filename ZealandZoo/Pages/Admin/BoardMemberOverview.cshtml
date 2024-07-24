@@ -1,0 +1,73 @@
+﻿@page
+@using ZealandZoo.Models
+@model ZealandZoo.Pages.Administration.BoardMemberOverviewModel
+@{
+    ViewData["Title"] = "Administrer Bestyrer";
+
+}
+<div class="articlesOfAssociationContainer">
+    <div class="adminCreateExhibition">
+        <a class="btn btn-success" asp-page="/Admin/CreateBoardMember">Opret nyt</a>
+    </div>
+    <table class="table">
+        <thread>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    FirstName
+                </th>
+                <th>
+                    LastName
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    AreaOfResponsibility
+                </th>
+                <th>
+                    StudyProgramme
+                </th>
+                <th>
+                    Semester
+                </th>
+                <th>
+                    Image
+                </th>
+            </tr>
+        </thread>
+        <tbody>
+            @foreach (BoardMember item in Model.BoardMembers)
+            {
+                <tr>
+                    <td>
+                        @item.BoardMemberId
+                    </td>
+                    <td>
+                        @item.FirstName
+                    </td>
+                    <td>
+                        @item.LastName
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        @item.AreaOfResponsibility
+                    </td>
+                    <td>
+                        @item.StudyProgramme
+                    </td>
+                    <td>
+                        @item.Semester
+                    </td>
+                    <td>
+                        <img src="/images/boardMembers/@item.ImageFileName" width="50" alt="Du har ikke tilføjet et billede" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -7,12 +7,17 @@ namespace ZealandZoo.Services
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        //Instance Field
+        public DbSet<BoardMember> BoardMembers { get; set; }
+
+        //Constructor
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
             
         }
 
+        //Methods
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
