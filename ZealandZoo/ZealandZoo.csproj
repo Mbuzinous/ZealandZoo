@@ -7,7 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\calendar.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\css\accounts.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\calendar.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\calendar.js" />
   </ItemGroup>
 
   <ItemGroup>

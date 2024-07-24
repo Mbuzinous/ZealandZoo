@@ -3,6 +3,7 @@ using ZealandZoo.Services;
 using Microsoft.AspNetCore.Identity;
 using ZealandZoo.Models;
 using ZealandZoo.Interface;
+using ZealandZoo.Interfaces;
 
 namespace ZealandZoo
 {
@@ -23,8 +24,7 @@ namespace ZealandZoo
             });
 
             builder.Services.AddTransient<IMailSender, MailSender>();
-            builder.Services.AddTransient<IEventRepository, ApplicationDbContext>();
-
+            builder.Services.AddSingleton<IEventService, EventService>();
 
             builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()

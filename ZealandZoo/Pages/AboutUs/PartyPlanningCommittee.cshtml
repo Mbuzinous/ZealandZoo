@@ -5,55 +5,6 @@
 }
 
 <div class="gridContainerCalendarBoard">
-    <h1>@ViewData["Title"]</h1>
-    <br />
-
-
-
-
-    @{
-        int currentMonth = DateTime.Now.Month;
-        int currentYear = DateTime.Now.Year;
-        DateTime firstDay = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-        int daysInCurrentMonth = DateTime.DaysInMonth(firstDay.Year, firstDay.Month);
-        DateTime lastDay = new DateTime(currentYear, currentMonth, daysInCurrentMonth);
-        // Sunday casted to int gives 0 but that will not work for us, we need 7 to be able to calculate number of empty cells correctly
-        int dayOfWeekFirst = ((int)firstDay.DayOfWeek > 0) ? (int)firstDay.DayOfWeek : 7;
-        int dayOfWeekLast = ((int)lastDay.DayOfWeek > 0) ? (int)lastDay.DayOfWeek : 7;
-    }
-
-    <div class="gridCalendarContainer">
-        <!-- filling up space of current month -->
-        @for (int i = 1; i <= daysInCurrentMonth; i++)
-        {
-            DateTime renderedDay = new DateTime(firstDay.Year, firstDay.Month, i);
-
-
-            // if Sunday
-            if (renderedDay.DayOfWeek == DayOfWeek.Sunday)
-            {
-                @:<div class="gridCalendar"><button type="button" class="gridButton">@i</button></div>
-            }
-            // if Saturday
-            else if (renderedDay.DayOfWeek == DayOfWeek.Saturday)
-            {
-                @:<div class="gridCalendar"><button type="button" class="gridButton">@i</button></div>
-            }
-            // if normal day
-            else
-            {
-                if (daysInCurrentMonth == DateTime.Now.Day)
-                {
-                    @:<div class="gridCalendar"><button type="button" class="gridButton>@i</button></div>
-                }
-                else
-                {
-                    @:<div class="gridCalendar"><button type="button" class="gridButton">@i</button></div>
-
-                }
-            }
-        }
-
-    </div>
+    
 </div>
 

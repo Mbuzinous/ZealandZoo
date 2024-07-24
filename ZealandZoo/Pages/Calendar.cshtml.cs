@@ -1,52 +1,53 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using NuGet.Protocol.Core.Types;
-using System.ComponentModel.DataAnnotations;
-using ZealandZoo.Interface;
+using ZealandZoo.Interfaces;
 using ZealandZoo.Models;
+using System;
+using System.Collections.Generic;
 
 namespace ZealandZoo.Pages
 {
     public class CalendarModel : PageModel
     {
-        private IEventRepository repo;
+        private readonly IEventService _eventService;
+
+
+        public CalendarModel(IEventService eventService)
+        {
+            _eventService = eventService;
+        }
+        public List<Event> Events { get; set; }
 
         [BindProperty]
         public Event Event { get; set; }
 
-        public List<Event> EventList { get; private set; } = new List<Event>();
-
-
-        public CalendarModel(IEventRepository repository)
-        {
-            repo = repository;
-        }
-
         public void OnGet()
         {
-            EventList = repo.GetAllEvents();
+            Events = _eventService.GetEvents();
         }
 
-        public IActionResult OnPostCreate()
+        public JsonResult OnGetEventsByDate(DateTime date)
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-            repo.CreateEvent(Event);
-            return Redirect("/Calendar");
+            var events = _eventService.GetEventsByDate(date);
+            return new JsonResult(events);
         }
 
-        public IActionResult OnPostDelete(int id)
+        public IActionResult OnPostAddEvent(Event newEvent)
         {
-            // Validate ID
-            if (id == null)
-            {
-                return Page();
-            }
+            _eventService.AddEvent(newEvent);
+            return RedirectToPage();
+        }
 
-            repo.DeleteEvent(id);
-            return Redirect("/Calendar");
+        public IActionResult OnPostUpdateEvent(Event updatedEvent)
+        {
+            _eventService.UpdateEvent(updatedEvent);
+            return RedirectToPage();
+        }
+
+        public IActionResult OnPostDeleteEvent(int id)
+        {
+            _eventService.DeleteEvent(id);
+            return RedirectToPage();
         }
     }
 }
