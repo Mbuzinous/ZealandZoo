@@ -1,7 +1,8 @@
 ﻿/*Vi vil gerne have Responsive Grid Layout*/
 /*Grid har tre følgende: Container. Item. Content. Tænk det ind hver gang.*/
 .gridContainerFrontPageTwoColumns {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: white;
+    opacity: 95%;
     color: black;
     display: grid;
     font-family: 'Times New Roman';
